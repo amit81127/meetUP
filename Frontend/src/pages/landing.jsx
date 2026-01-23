@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function App() {
+export default function landing() {
   return (
     <div>
-      app
+      landing Page
     </div>
   )
 }
