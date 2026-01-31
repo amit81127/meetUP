@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Authentication from "./pages/Authantication";
 import { AuthProvider } from "./contexts/AuthContext";
+import VideoMeetComponent from "./pages/videoMeet";
 
 export default function App() {
   return (
@@ -14,12 +15,7 @@ export default function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/auth" element={<Authentication />} />
 
-          {/* Future routes */}
-          {/*
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          */}
+          <Route path="/:url" element={<VideoMeetComponent />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
