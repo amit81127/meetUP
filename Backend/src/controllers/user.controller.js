@@ -17,7 +17,7 @@ const login=async(req,res)=>{
          let token =crypto.randomBytes(16).toString('hex');
          user.token=token;
          await user.save();
-         return res.status(httpStatus.OK).send({ token: token });
+         return res.status(httpStatus.OK).send({ token: token, user: { name: user.name, username: user.username } });
         }
     }catch(e){
         return res.status(httpStatus.INTERNAL_SERVER_ERROR).send({ error: 'Login failed' });
