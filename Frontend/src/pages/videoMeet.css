@@ -1,104 +1,61 @@
 .meetVideoContainer {
     position: relative;
-    width: 100vw;
     height: 100vh;
-    background-color: #121212;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    background: rgb(1, 4, 48);
 }
 
-.conferenceView {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    gap: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.conferenceView video {
-    max-width: 45%;
-    max-height: 45%;
-    border-radius: 10px;
-    object-fit: cover;
-    background-color: black;
-}
-
-/* Local user video (Picture in Picture style) */
 .meetUserVideo {
     position: absolute;
-    bottom: 100px;
-    right: 20px;
-    width: 200px;
-    height: 150px;
-    border-radius: 10px;
-    object-fit: cover;
-    border: 2px solid #333;
-    z-index: 10;
-    background-color: black;
+    bottom: 10vh;
+    height: 20vh;
+    width: auto;
+    left: 0;
+    border-radius: 20px;
 }
 
 .buttonContainers {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+}
+
+.buttonContainers svg {
+    font-size: 3rem;
+}
+
+.conferenceView {
+
     display: flex;
-    gap: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    border-radius: 30px;
-    z-index: 20;
+
+    padding: 10px;
+    gap: 10px;
+}
+
+.conferenceView video {
+    width: 40vw;
+    height: 20vh;
+    min-width: 30vw;
+    border-radius: 10px;
 }
 
 .chatRoom {
     position: absolute;
-    top: 0;
+    height: 90vh;
     right: 0;
-    width: 350px;
-    height: 100%;
-    background-color: #1e1e1e;
-    color: white;
-    z-index: 30;
-    display: flex;
-    flex-direction: column;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    background: white;
+    border-radius: 10px;
+    width: 30vw;
+    padding-inline: 20px;
 }
 
 .chatContainer {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
-.chatContainer h1 {
-    margin-top: 0;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-}
-
-.chattingDisplay {
-    flex: 1;
-    overflow-y: auto;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 .chattingArea {
-    display: flex;
-    gap: 10px;
-}
-
-.chattingArea .MuiTextField-root {
-    flex: 1;
-    background-color: white;
-    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
 }
